@@ -4,8 +4,8 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'leafOfTree/vim-vue-plugin'
 call vundle#end()
 filetype plugin indent on
 
@@ -35,7 +35,9 @@ autocmd FileType phtml noremap <C-L> :!/usr/bin/env php -l %<CR>
 
 " vim-plug plugin manager
 call plug#begin('~/.vim/plugged')
+
 " useful plugins
+Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-startify'
 Plug 'preservim/nerdtree'
@@ -44,6 +46,8 @@ Plug 'ryanoasis/vim-devicons'
 "Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" vue plugins
+Plug 'leafOfTree/vim-vue-plugin'
 
 " php plugins
 Plug 'StanAngeloff/php.vim'
@@ -53,6 +57,7 @@ Plug 'ncm2/ncm2'
 Plug 'phpactor/ncm2-phpactor'
 Plug 'marlonfan/coc-phpls'
 call plug#end()
+
 "nerdtree plugin
 nnoremap <C-e> :NERDTreeToggle<CR>
 " Vim NERDTree Syntax Highlight Configs
@@ -96,4 +101,6 @@ if !has('gui_running')
   set t_Co=256
   endif
 
-
+" set place of term split
+set splitbelow
+set termwinsize=10x0
