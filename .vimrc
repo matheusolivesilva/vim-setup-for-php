@@ -56,9 +56,15 @@ Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
 Plug 'ncm2/ncm2'
 Plug 'phpactor/ncm2-phpactor'
 Plug 'marlonfan/coc-phpls'
+
+" Dracula theme
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
-"nerdtree plugin
+" dracula theme
+colorscheme dracula
+
+" nerdtree plugin
 nnoremap <C-e> :NERDTreeToggle<CR>
 " Vim NERDTree Syntax Highlight Configs
 let g:NERDTreeExtensionHighlightColor = {}
@@ -104,3 +110,5 @@ if !has('gui_running')
 " set place of term split
 set splitbelow
 set termwinsize=10x0
+
+
