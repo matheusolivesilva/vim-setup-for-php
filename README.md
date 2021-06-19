@@ -1,6 +1,6 @@
 # VIM Setup for PHP
-
-This repo has my VIM dotfiles and setup.
+Use VIM like an IDE!
+<div style="text-align:center"><img src="example.gif" /></div>
 
 ## Prerequesites
 - PHP 7.4
