@@ -6,6 +6,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'leafOfTree/vim-vue-plugin'
+Plugin 'severin-lemaignan/vim-minimap'
+" Laravel/Lumen plugins
+Plugin 'noahfrederick/vim-laravel'
 call vundle#end()
 filetype plugin indent on
 
@@ -32,10 +35,12 @@ filetype plugin on
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
 autocmd FileType phtml noremap <C-L> :!/usr/bin/env php -l %<CR>
 
+" general configs
+set ic
 
 " vim-plug plugin manager
 call plug#begin('~/.vim/plugged')
-
+Plug 'preservim/tagbar'
 " useful plugins
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'itchyny/lightline.vim'
@@ -64,6 +69,8 @@ call plug#end()
 " dracula theme
 colorscheme dracula
 
+" phpactor and coc.vim plugin
+autocmd FileType php set iskeyword+=$
 " nerdtree plugin
 nnoremap <C-e> :NERDTreeToggle<CR>
 " Vim NERDTree Syntax Highlight Configs
@@ -111,4 +118,15 @@ if !has('gui_running')
 set splitbelow
 set termwinsize=10x0
 
+" show colorized minimap plugin
+let g:minimap_highlight='Directory'
 
+" open method with F8 of preservim/tagbar
+let g:tagbar_autofocus = 1
+let g:tagbar_autoclose = 1
+let g:tagbar_indent = 1
+let g:tagbar_case_insensitive = 1
+let g:tagbar_show_data_type = 1
+let g:tagbar_show_visibility = 1
+let g:tagbar_show_tag_linenumbers = 1
+nmap <F8> :TagbarToggle<CR>
