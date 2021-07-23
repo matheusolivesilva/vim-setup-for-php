@@ -22,4 +22,4 @@ sudo apt-get install exuberant-ctags -y
 If you know nothing about VIM, you can learn in this links:
 - Playground: https://www.openvim.com/
 - YouTube Tutorial: https://www.youtube.com/watch?v=ggSyF1SVFr4
-- My Anki deck (sorry, only in brazilian portuguese, this deck was created when a was a newbie in english language): https://ankiweb.net/shared/info/1827459756
+- My Anki deck (sorry, only in brazilian portuguese, this deck was created when i was a newbie in english language): https://ankiweb.net/shared/info/1827459756
